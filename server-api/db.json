@@ -1,0 +1,74 @@
+{
+  "alunos": [
+    {
+      "id": "1",
+      "alunoNome": "Albertt",
+      "alunoSegNome": "Cruise",
+      "alunoCPF": "111111111111",
+      "alunoMatricula": "1001",
+      "alunoNota": "7",
+      "nomeTurmaAluno": "Portugues",
+      "moduloTurma": "3"
+    },
+    {
+      "id": "2",
+      "alunoNome": "Renan",
+      "alunoSegNome": "Cruise",
+      "alunoCPF": "111111111111",
+      "alunoMatricula": "1001",
+      "alunoNota": "5",
+      "nomeTurmaAluno": "Matematica",
+      "moduloTurma": "1"
+    },
+    {
+      "id": "3",
+      "alunoNome": "Tom",
+      "alunoSegNome": "Cruise",
+      "alunoCPF": "111111111111",
+      "alunoMatricula": "1001",
+      "alunoNota": "5",
+      "nomeTurmaAluno": "Ciencias",
+      "moduloTurma": "3"
+    },
+    {
+      "id": "85fb56b9-48f3-4b6e-9e4a-82f252d8929b",
+      "alunoNome": "Teste",
+      "alunoSegNome": "Testando",
+      "alunoCPF": "11111111111111",
+      "alunoMatricula": "1222",
+      "alunoNota": "7",
+      "nomeTurmaAluno": "Ingles",
+      "moduloTurma": "2"
+    },
+    {
+      "id": "bb2b93ce-d261-41ed-b299-ac1c0c41718d",
+      "alunoNome": "teste",
+      "alunoSegNome": "testaaaa",
+      "alunoCPF": "asdasd",
+      "alunoMatricula": "adasdads",
+      "alunoNota": "1",
+      "nomeTurmaAluno": "Ciencias",
+      "moduloTurma": "2"
+    },
+    {
+      "id": "9bdda998-472f-4634-98dd-89513b0ce916",
+      "alunoNome": "TEstadasdads",
+      "alunoSegNome": "testaaaa",
+      "alunoCPF": "123456789102",
+      "alunoMatricula": "1222",
+      "alunoNota": "10",
+      "nomeTurmaAluno": "Ciencias",
+      "moduloTurma": "3"
+    },
+    {
+      "id": "8684bc06-3308-47fd-877e-8ad1096f3910",
+      "alunoNome": "teste",
+      "alunoSegNome": "Testando",
+      "alunoCPF": "123123123123123",
+      "alunoMatricula": "123455",
+      "alunoNota": "10",
+      "nomeTurmaAluno": "Ciencias",
+      "moduloTurma": "2"
+    }
+  ]
+}
