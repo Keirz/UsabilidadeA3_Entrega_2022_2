@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import user from "../images/user.jpg";
 
 const ProfessorDetail = (props) => {
-  const { professorNome, profesorSegNome, professorCPF, professorTitulo, professorTurma, professorModuloTurma } = props.location.state.professor;
+  const { professorNome, profesorSegNome, professorCPF, professorTitulo,
+     professorTurma, professorModuloTurma } = props.location.state.professor;
   return (
     <div className="main">
       <div className="ui card centered">
@@ -22,7 +23,7 @@ const ProfessorDetail = (props) => {
       <div className="center-div">
         <Link to="/professores">
           <button className="ui button blue center">
-            Voltar para a List de Profs
+            Voltar para a Lista de Profs
           </button>
         </Link>
       </div>

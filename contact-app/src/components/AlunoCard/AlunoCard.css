@@ -1,0 +1,26 @@
+
+.table1 th{
+    color: #D9A823;
+    text-decoration: none;
+    font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+    text-align: center;
+ background-color: #f2f2f2;
+}
+
+.table1 td{
+    font-size: 16px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #93FA7A;
+    
+    font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+}
+.table1 i{
+    
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+}

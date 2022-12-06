@@ -1,0 +1,55 @@
+*{
+  font-family: 'Roboto', sans-serif;
+}
+.ui {
+  font-family: 'Roboto', sans-serif;
+
+
+}
+.main {
+  text-align: center;
+  margin-top: 5em;
+}
+.main h2{
+  background-color: #FC9F28;
+  border-radius: 1rem;
+  margin: 16px 4px;
+  
+  box-shadow: 4px 4px 4px rgba(0, 0, 0 ,0.06);
+}
+.table1 th{
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+}
+.center {
+  justify-content: center;
+  padding: 10px;
+}
+
+.ui.search input {
+  width: 100%;
+  border-radius: 0 !important;
+}
+
+.item {
+  padding: 15px 0px !important;
+}
+
+i.icon {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.right {
+  float: right !important;
+}
+.center-div {
+  text-align: center;
+}
+
+
+.pageColor{
+  background-color: #d2d2d2;
+  height: 100vh;
+}

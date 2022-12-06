@@ -1,0 +1,38 @@
+.buttonAdd{
+  
+    border: 1px solid;
+    border-radius: 0.25rem;
+    background-clip:content-box;
+    
+  box-shadow: 4px 4px 4px rgba(0, 0, 0 ,0.08);
+}
+.buttonAdd button{
+    
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  background-color: #93FA7A;
+  float: right;
+  
+  box-shadow: 4px 4px 4px rgba(0, 0, 0 ,0.08);
+}
+.buttonAdd button:hover{
+    background-color: #FC9F28;
+}
+
+.listHead{
+    display: flex;
+    flex-wrap: wrap;
+}
+.lista h2{
+    background-color: #FC9F28;
+    text-align: center;
+    width: 100%;
+    padding: 4px 4px;
+    
+    border-radius: 0.25rem;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0 ,0.09);
+}
+
+.lista{
+    margin-top: 5em;
+}

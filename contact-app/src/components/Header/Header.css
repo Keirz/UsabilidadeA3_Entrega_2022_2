@@ -1,0 +1,35 @@
+
+
+.navbarHeader{
+    width: 50%;
+    background-color: #AFD923;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    
+    font-size: 24px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0 ,0.06);
+}
+.brandImg{
+    max-height: 32px;
+    padding-right: 0.25rem;
+}
+.left{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.right{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: flex-end;
+
+}

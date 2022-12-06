@@ -1,0 +1,28 @@
+
+.formMain{
+    margin-top: 5em;
+}
+.formMain h2{
+    text-align: center;
+    background-color: #FC9F28;
+  border-radius: 1rem;
+  margin: 16px 4px;
+  
+  box-shadow: 4px 4px 4px rgba(0, 0, 0 ,0.06);
+}
+.formMain form{
+    border: 1px solid;
+    border-radius: 1rem;
+    padding: 20px 8px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    background-color: #d2d2d2;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0 ,0.06);
+    width: 50%;
+}
+.form button{
+  float: right;
+}
+.field label {
+  font-size: 18px;
+}

@@ -1,0 +1,16 @@
+        </tr>   
+    <div className="item">
+      <img className="ui avatar image" src={user} alt="user" />
+      <div className="content">
+        <Link
+          to={{ pathname: `/aluno/${id}`, state: { aluno: props.aluno } }}
+        >
+          <div className="header">{alunoNome}</div>
+          <div>{alunoSegNome}</div>
+          <div>{alunoMatricula}</div>
+          <div>{alunoCPF}</div>
+          <div>{alunoSala}</div>
+        </Link>
+      </div>
+      
+    </div>

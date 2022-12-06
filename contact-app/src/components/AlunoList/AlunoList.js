@@ -1,6 +1,10 @@
 import React from "react";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from "react-router-dom";
 import AlunoCard from "../AlunoCard/AlunoCard.js"
+import './AlunoList.css'
+import Table from "react-bootstrap/esm/Table.js";
 
 const AlunoList = (props) => {
   console.log(props);
@@ -19,14 +23,17 @@ const AlunoList = (props) => {
     );
   });
   return (
-    <div className="main">
+    <div className="lista contianer-fluid">
+      <div className="container-fluid listHead">
       <h2>
-        Aluno List
-        <Link to="/addA">
-          <button className="ui button blue right">Add Aluno</button>
+        Lista de Alunos
+        </h2>
+        <Link to="/addA" className="buttonAdd">
+          <button className="button blue right">Add Aluno</button>
         </Link>
-      </h2>
-      <div className="ui celled list">{renderAlunoList}</div>
+      
+      </div>
+      <Table responsive bordered striped hover className="table1">{renderAlunoList}</Table>
     </div>
   );
 };

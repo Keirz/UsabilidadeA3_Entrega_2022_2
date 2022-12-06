@@ -1,5 +1,7 @@
 import React from "react";
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './EditProfessor.css'
 class EditProfessor extends React.Component {
   constructor(props) {
     super(props);
@@ -28,11 +30,11 @@ class EditProfessor extends React.Component {
   };
   render() {
     return (
-      <div className="ui main">
-        <h2>Edit Professor</h2>
-        <form className="ui form" onSubmit={this.update}>
+      <div className="ui formMain container-fluid">
+        <h2>Editar Professor</h2>
+        <form className="ui form container-fluid" onSubmit={this.update}>
           <div className="field">
-            <label>professorNome</label>
+            <label>Nome</label>
             <input
               type="text"
               name="professorNome"
@@ -42,7 +44,7 @@ class EditProfessor extends React.Component {
             />
           </div>
           <div className="field">
-            <label>profesorSegNome</label>
+            <label>Segundo Nome</label>
             <input
               type="text"
               name="profesorSegNome"
@@ -52,7 +54,7 @@ class EditProfessor extends React.Component {
             />
           </div>   
           <div className="field">
-            <label>professorCPF</label>
+            <label>CPF</label>
             <input
               type="text"
               name="professorCPF"
@@ -62,15 +64,16 @@ class EditProfessor extends React.Component {
             />
           </div>
           <div className="field">
-            <label>professorTitulo</label>
-            <input
-              type="text"
-              name="professorTitulo"
-              placeholder="professorTitulo"
-              value={this.state.professorTitulo}
-              onChange={(e) => this.setState({ professorTitulo: e.target.value })}
-            />
-          </div>
+            <label>Titulo Professor</label>
+            <select value={this.state.professorTitulo} onChange={(e) => this.setState({ professorTitulo: e.target.value })}
+             >
+              <option></option>
+              <option value="Mestre">Mestre</option>
+              <option value="Doutor">Doutor</option>
+              <option value="Pos-Graduado">Pos-Graduado</option>
+              <option value="Licenciado">Licenciado</option>
+             </select>
+             </div>
            <div className="field">
             <label>Turma</label>
             <select value={this.state.professorTurma} onChange={(e) => this.setState({ professorTurma: e.target.value })}

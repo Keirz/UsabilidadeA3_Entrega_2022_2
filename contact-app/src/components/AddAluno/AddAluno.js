@@ -1,35 +1,43 @@
 import React from "react";
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './AddAluno.css';
+
 class AddAluno extends React.Component {
   state = {
     alunoNome: "",
     alunoSegNome: "",
     alunoCPF: "",
     alunoMatricula: "",
-    alunoNota: "",
+    alunoNota1: "",
+    alunoNota2: "",
+    alunoNota3: "",
     nomeTurmaAluno: "",
     moduloTurma: ""
   };
 
   add = (e) => {
     e.preventDefault();
-     if (this.state.alunoNome === "" ||this.state.alunoCPF === "") {
-      alert("ALl the fields are mandatory!");
+     if (this.state.alunoNome === "" ||this.state.alunoCPF === "" || this.state.alunoSegNome || this.state.alunoMatricula) {
+      alert("Favor preencher as informações necessárias!");
       return;
     } 
     this.props.addAlunoHandler(this.state);
-    this.setState({ alunoNome: "", alunoSegNome: "", alunoCPF: "", alunoMatricula: "", alunoNota: "", nomeTurmaAluno: "", moduloTurma: "" });
+    this.setState({ alunoNome: "", alunoSegNome: "", alunoCPF: "", alunoMatricula: "", alunoNota1: "",
+    alunoNota2: "",
+    alunoNota3: "", nomeTurmaAluno: "", moduloTurma: "" });
     this.props.history.push("/aluno");
   };
   
   render() {
     return (
-      <div className="ui main">
-        <h2>Add Aluno</h2>
-        <form className="ui form" onSubmit={this.add}>
+      <div className="ui formMain container-fluid">
+        <h2>ADICIONAR ALUNO</h2>
+        <form className="ui form container-fluid" onSubmit={this.add}>
           <div className="field">
             <label>Nome</label>
             <input
+            required
               type="text"
               name="alunoNome"
               placeholder="Nome Aluno"
@@ -40,6 +48,7 @@ class AddAluno extends React.Component {
           <div className="field">
             <label>Sobrenome</label>
             <input
+            required
               type="text"
               name="alunoSegNome"
               placeholder="Sobrenome Aluno"
@@ -50,7 +59,8 @@ class AddAluno extends React.Component {
           <div className="field">
             <label>Matrícula</label>
             <input
-              type="text"
+            required
+              type="number"
               name="alunoMatricula"
               placeholder="Matricula Aluno"
               value={this.state.alunoMatricula}
@@ -60,7 +70,9 @@ class AddAluno extends React.Component {
           <div className="field">
             <label>CPF</label>
             <input
-              type="text"
+            required
+            maxLength={15}
+              type="number"
               name="alunoCPF"
               placeholder="Insira o CPF do aluno"
               value={this.state.alunoCPF}
@@ -68,13 +80,31 @@ class AddAluno extends React.Component {
             />
           </div>
           <div className="field">
-            <label>Nota</label>
+            <label>Nota Modulo 1</label>
             <input
-              type="text"
-              name="alunoNota"
-              placeholder="Insira a nota que o aluno tirou"
-              value={this.state.alunoNota}
-              onChange={(e) => this.setState({ alunoNota: e.target.value })}
+              type="number"
+              name="alunoNota1"
+              placeholder="Insira a nota que o aluno tirou no modulo 1"
+              value={this.state.alunoNota1}
+              onChange={(e) => this.setState({ alunoNota1: e.target.value })}
+            />
+          </div>  <div className="field">
+            <label>Nota Modulo 2</label>
+            <input
+              type="number"
+              name="alunoNota2"
+              placeholder="Insira a nota que o aluno tirou no modulo 2"
+              value={this.state.alunoNota2}
+              onChange={(e) => this.setState({ alunoNota2: e.target.value })}
+            />
+          </div>  <div className="field">
+            <label>Nota Modulo 3</label>
+            <input
+              type="number"
+              name="alunoNota3"
+              placeholder="Insira a nota que o aluno tirou no modulo 3"
+              value={this.state.alunoNota3}
+              onChange={(e) => this.setState({ alunoNota3: e.target.value })}
             />
           </div>
           <div className="field">
@@ -98,7 +128,7 @@ class AddAluno extends React.Component {
              </select>
           </div>
           
-          <button className="ui button blue">Add</button>
+          <button className="ui button blue botaoAdd">ADICIONAR</button>
         </form>
       </div>
     );

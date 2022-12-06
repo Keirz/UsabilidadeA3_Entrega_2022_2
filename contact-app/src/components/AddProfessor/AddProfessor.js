@@ -28,9 +28,9 @@ class AddProfessor extends React.Component {
   
   render() {
     return (
-      <div className="ui main">
-        <h2>Add Prof</h2>
-        <form className="ui form" onSubmit={this.add}>
+      <div className="ui formMain container-fluid">
+        <h2>ADICIONAR PROFESSOR</h2>
+        <form className="ui form container-fluid" onSubmit={this.add}>
           <div className="field">
             <label>Nome</label>
             <input
@@ -63,13 +63,14 @@ class AddProfessor extends React.Component {
           </div>
           <div className="field">
             <label>Título</label>
-            <input
-              type="text"
-              name="professorTitulo"
-              placeholder="Insira Titulo do professor"
-              value={this.state.professorTitulo}
-              onChange={(e) => this.setState({ professorTitulo: e.target.value })}
-            />
+            <select value={this.state.professorTitulo} onChange={(e) => this.setState({ professorTitulo: e.target.value })}
+             >
+              <option></option>
+              <option value="Mestre">Mestre</option>
+              <option value="Doutor">Doutor</option>
+              <option value="Pos-Graduado">Pos-Graduado</option>
+              <option value="Licenciado">Licenciado</option>
+             </select>
           </div>
           <div className="field">
             <label>Turma</label>

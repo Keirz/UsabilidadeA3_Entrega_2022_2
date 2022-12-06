@@ -14,6 +14,8 @@ import ProfessorsList from "./ProfessorsList/ProfessorsList";
 import AddProfessor from "./AddProfessor/AddProfessor";
 import ProfessorDetail from "./ProfessorDetail/ProfessorDetail";
 import EditProfessor from "./EditProfessor/EditProfessor";
+import Home from './Home/Home.js';
+import FooterPage from "./FooterPage/FooterPage";
 
 function App() {/* 
   const LOCAL_STORAGE_KEY = "alunos"; *//* 
@@ -77,7 +79,9 @@ function App() {/*
 
   const updateAlunosHandler = async (aluno) => {
     const response = await api.put(`/alunos/${aluno.id}`, aluno);
-    const { id, alunoNome, alunoSegNome, alunoCPF, alunoMatricula, alunoNota, nomeTurmaAluno, moduloTurma } = response.data;
+    const { id, alunoNome, alunoSegNome, alunoCPF, alunoMatricula, alunoNota1,
+    alunoNota2,
+    alunoNota3, nomeTurmaAluno, moduloTurma } = response.data;
     setAlunos(
       alunos.map((aluno) => {
         return aluno.id === id ? { ...response.data } : aluno;
@@ -127,10 +131,24 @@ function App() {/*
 
 
   return (
-    <div className="ui container">
+    <div className="ui container-fluid pageColor">
       <Router>
         <Header />
         <Switch>
+        <Route
+        path="/"
+        exact
+        render={ ()=> (
+          <div>
+          <Home />
+          
+      <FooterPage />
+      </div>
+        )
+        }/>
+
+       
+      
           <Route
             path="/aluno"
             
@@ -184,7 +202,7 @@ function App() {/*
             updateProfessorsHandler={updateProfessorsHandler} />
           )}
             />
-          <Route path="/aluno/:id" component={AlunoDetail} />
+          <Route path="/aluno/:alunoCPF" component={AlunoDetail} />
           
           <Route path="/professor/:professorCPF" component={ProfessorDetail} />
         </Switch>

@@ -1,16 +1,23 @@
 import React from "react";
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './EditAluno.css'
+
 class EditAluno extends React.Component {
   constructor(props) {
     super(props);
-    const { id, alunoNome, alunoSegNome, alunoCPF, alunoMatricula, alunoNota,nomeTurmaAluno, moduloTurma } = props.location.state.aluno;
+    const { id, alunoNome, alunoSegNome, alunoCPF, alunoMatricula, alunoNota1,
+      alunoNota2,
+      alunoNota3,nomeTurmaAluno, moduloTurma } = props.location.state.aluno;
     this.state = {
       id,
       alunoNome,
       alunoSegNome, 
       alunoCPF,
       alunoMatricula,
-      alunoNota,
+      alunoNota1,
+      alunoNota2,
+      alunoNota3,
       nomeTurmaAluno,
       moduloTurma
     };
@@ -24,16 +31,18 @@ class EditAluno extends React.Component {
       return;
     } 
     this.props.updateAlunosHandler(this.state);
-    this.setState({ alunoNome: "", alunoSegNome: "", alunoCPF: "",  alunoMatricula: "", alunoNota: "", nomeTurmaAluno: "", moduloTurma: "" });
+    this.setState({ alunoNome: "", alunoSegNome: "", alunoCPF: "",  alunoMatricula: "", alunoNota1: "",
+    alunoNota2: "",
+    alunoNota3: "", nomeTurmaAluno: "", moduloTurma: "" });
     this.props.history.push("/aluno");
   };
   render() {
     return (
-      <div className="ui main">
-        <h2>Edit Aluno</h2>
-        <form className="ui form" onSubmit={this.update}>
+      <div className="ui formMain container-fluid">
+        <h2>Editar Aluno</h2>
+        <form className="ui form container-fluid" onSubmit={this.update}>
           <div className="field">
-            <label>alunoNome</label>
+            <label>Nome</label>
             <input
               type="text"
               name="alunoNome"
@@ -43,7 +52,7 @@ class EditAluno extends React.Component {
             />
           </div>
           <div className="field">
-            <label>alunoSegNome</label>
+            <label>Sobrenome</label>
             <input
               type="text"
               name="alunoSegNome"
@@ -53,7 +62,7 @@ class EditAluno extends React.Component {
             />
           </div>   
           <div className="field">
-            <label>alunoCPF</label>
+            <label>CPF</label>
             <input
               type="text"
               name="alunoCPF"
@@ -63,7 +72,7 @@ class EditAluno extends React.Component {
             />
           </div>
           <div className="field">
-            <label>alunoMatricula</label>
+            <label>Matricula</label>
             <input
               type="text"
               name="alunoMatricula"
@@ -73,13 +82,33 @@ class EditAluno extends React.Component {
             />
           </div>
           <div className="field">
-            <label>alunoNota</label>
+            <label>Nota Modulo 1</label>
             <input
               type="text"
-              name="alunoNota"
-              placeholder="alunoNota"
-              value={this.state.alunoNota}
-              onChange={(e) => this.setState({ alunoNota: e.target.value })}
+              name="alunoNota1"
+              placeholder="Insira a nota que o aluno tirou no modulo 1"
+              value={this.state.alunoNota1}
+              onChange={(e) => this.setState({ alunoNota1: e.target.value })}
+            />
+          </div>
+          <div className="field">
+            <label>Nota Modulo 2</label>
+            <input
+              type="text"
+              name="alunoNota2"
+              placeholder="Insira a nota que o aluno tirou no modulo 2"
+              value={this.state.alunoNota2}
+              onChange={(e) => this.setState({ alunoNota2: e.target.value })}
+            />
+          </div>
+          <div className="field">
+            <label>Nota Modulo 3</label>
+            <input
+              type="text"
+              name="alunoNota3"
+              placeholder="Insira a nota que o aluno tirou no modulo 3"
+              value={this.state.alunoNota3}
+              onChange={(e) => this.setState({ alunoNota3: e.target.value })}
             />
           </div>
            <div className="field">
