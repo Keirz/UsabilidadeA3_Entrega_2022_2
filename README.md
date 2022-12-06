@@ -21,6 +21,7 @@ https://color.adobe.com/My-Color-Theme-color-theme-21055343/
 - Bootstrap => Lib Framework do Bootstrap
 - React-Bootstrap => Lib Framework de React Components do Bootstrap
 - uuIDv4 => Criação de ID's únicas para os usuários caso necessite criar um sistema de login com tokens.
+- cdbreact => Components Lib de React Bootstrap5.
 
 
 ## DAS INSTRUÇÕES DE USO:
