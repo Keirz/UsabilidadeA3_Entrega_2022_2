@@ -1,0 +1,42 @@
+CREATE DATABASE schooldb
+    WITH
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'Portuguese_Brazil.1252'
+    LC_CTYPE = 'Portuguese_Brazil.1252'
+
+CREATE TABLE school (school_id INTEGER NOT NULL UNIQUE, 
+					 nome VARCHAR(255), 
+					 CNPJ VARCHAR(255), 
+					 CEP VARCHAR(255), 
+					 PRIMARY KEY(school_id));
+
+CREATE TABLE teachers (teacher_id INTEGER NOT NULL UNIQUE, 
+					   nome VARCHAR(255) NOT NULL, 
+					   CPF VARCHAR(255) NOT NULL UNIQUE, 
+					   titulo_academico VARCHAR(255) NOT NULL, 
+					   disciplina VARCHAR(255), 
+					   PRIMARY KEY(teacher_id));
+
+CREATE TABLE students (students_id INTEGER NOT NULL UNIQUE, 
+					   nome VARCHAR(255) not null, 
+					   CPF varchar(255) NOT NULL UNIQUE, 
+					   matricula VARCHAR(255) NOT NULL UNIQUE, 
+					   sala VARCHAR(255), 
+					   PRIMARY KEY(students_id));
+
+CREATE TABLE boletim (boletim_id INTEGER NOT NULL UNIQUE, 
+					  matricula VARCHAR(255) references 
+					  students (matricula), 
+					  nota_mod1 INTEGER, 
+					  nota_mod2 INTEGER, 
+					  nota_mod3 INTEGER, 
+					  PRIMARY KEY(boletim_id));
+
+CREATE TABLE classes (class_id INTEGER NOT NULL UNIQUE, 
+					  nome VARCHAR(255), qtdStudents INTEGER, 
+					  PRIMARY KEY(class_id), 
+					  teacher INTEGER REFERENCES teachers (teacher_id), 
+					  student INTEGER REFERENCES students (students_id));
+					  
+ALTER TABLE students ADD boletim INTEGER REFERENCES boletim (boletim_id);
+ALTER TABLE classes ADD CONSTRAINT PROFESSOR UNIQUE (teacher, class_id );
